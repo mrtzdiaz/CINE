@@ -1,0 +1,260 @@
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+
+	15% { transform: translateX(-25rem); }
+	35% { transform: translateX(-25rem); }
+
+	40% { transform: translateX(-50rem); }
+	55% { transform: translateX(-50rem); }
+
+	60% { transform: translateX(-75rem); }
+	75% { transform: translateX(-75rem); }
+
+	80% { transform: translateX(-100rem); }
+	95% { transform: translateX(-100rem); }
+
+	96% { transform: translateX(-100rem); }
+	100% { transform: translateX(-100rem); }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+	font-family: sans-serif;
+	margin: 0px 20px 0px 20px;
+}
+
+/*BARRA DE NAVEGACIÓN*/
+
+.menu{
+	position: sticky;
+	top: 0;
+}
+
+.navegacion{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 100px;
+	background-color: rgb(26, 26, 26);
+	z-index: 20;
+}
+
+.navegacion h1{
+	color: white;
+}
+
+.navegacion img{
+	width: 6rem;
+}
+
+
+.boton{
+	height: 40%;
+	border-radius: 10px;
+	border: 3px solid white;
+	background-color: rgb(26, 26, 26);
+}
+
+.boton a{
+	text-decoration: none;
+	color: white;
+}
+
+
+/*REDIRECCIÓN A COMBOS*/
+.division{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	background-image: url(./PALOMITAS.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.division p{
+	text-align: center;
+	font-size: 60px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	z-index: 15;
+	color: white;
+	background-color: rgba(26, 26, 26, .5);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.division button{
+	z-index: 15;
+	background-color: rgb(226, 226, 0);
+	border-radius: 10px;
+	top: 60%;
+	border: rgba(0, 0, 0, 1);
+	margin-bottom: 10%;
+}
+
+.division button a{
+	text-decoration: none;
+	text-align: center;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 40px;
+	color: rgb(26, 26, 26);
+}
+
+
+/*CARTELERA*/
+
+.titulos{
+	font-size: 300%;
+	margin: 80px 0px 0px 0px;
+	text-align: center;
+}
+
+#titulo_uno::after{
+	content: "🔥";
+}
+
+#titulo_uno::before{
+	content: "🔥";
+}
+
+.container{
+	display: flex;
+	flex-direction: row;
+	margin-left: 5rem;
+	margin-right: 5rem;
+	margin-bottom: 5rem;
+	padding: 2.5rem;
+}
+
+.container img{
+	width: 100%;
+	border-radius: 30px 30px 0px 0px;
+}
+
+#one{
+	border-radius: 30px 30px 30px 30px;
+	margin: 1vw;
+	background-color: rgb(26, 26, 26);
+}
+
+#one h3{
+	text-align: center;
+	color: rgb(244, 244, 242);
+}
+
+#one p{
+	text-align: center;
+	color: rgb(244, 244, 242);
+}
+
+#one button{
+	width: 60%;
+	position: relative;
+	background-color: rgb(26, 26, 26);
+	border-radius: 10px;
+	border: 2px solid white;
+}
+
+#one button:hover{
+	width: 60%;
+	position: relative;
+	background-color: white;
+	border-radius: 10px;
+}
+
+#one button:hover a{
+	text-decoration: none;
+	color: rgb(26, 26, 26);
+}
+
+#one a{
+	text-decoration: none;
+	color: white;
+}
+
+.wrapper {
+	max-width: 50rem;
+	margin: 0 auto;
+}
+
+.slider {
+	position: relative;
+}
+
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	list-style: none;
+	padding-left:0
+}
+
+.slide {
+	width: 70vw;
+	flex-shrink: 0;
+	animation-name: slide;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.slides:hover .slide {
+	animation-play-state: paused;
+}
+
+.slide img {
+	width: 25rem;
+	vertical-align: right;
+}
+
+.slide a {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+.slide:target {
+	animation-name: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+}
+
+.slider-controler {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+.slider-controler li {
+	margin: 0 0.5rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+	.slide {
+		width: 25rem;
+	}
+
+}

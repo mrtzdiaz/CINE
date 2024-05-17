@@ -1,0 +1,82 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    background-color: rgb(253, 253, 253);
+}
+.cards{
+    background-color: rgba(243, 250, 253, 0.932);
+    margin: 100px 100px 120px 120px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-right: 60px;
+}
+.portada {
+    width:100%;
+    height: 100px;
+    padding:10px ;
+    background: #ecc204;
+  
+}
+
+.uno {
+    width: 20%; 
+    border-radius: 10px; 
+    margin: 5% auto; 
+    padding: 0%;
+    box-sizing: border-box; 
+}
+    
+.uno button:hover{
+    color: black;
+    background-color: crimson;
+}
+.uno button{
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+.uno button a{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+.ini{
+    text-shadow: whitesmoke 5px 2px 4px;
+    text-align: center;
+}
+.container{
+    background: linear-gradient(53.09deg, rgb(223, 212, 64) 2.64%, rgb(156, 26, 26) 61.29%);
+   width: 100%;
+    height: 100px;
+    position:relative;
+}
+
+#uno{
+    background-color: aquamarine;
+}
+.imagen{
+    background-color: #ecc204;
+    width: 80%;
+    height: 20%;
+    margin: 10px;
+}
+.container_dos {
+    display: flex; /* Change flexbox to flex */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+    .uno {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }

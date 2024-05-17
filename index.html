@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+    <style>
+        .grid-container>* {
+            text-align: center;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .menu {
+            grid-area: menu;
+        }
+
+        .header img {
+            width: 100%;
+        }
+
+        .navbar {
+            grid-area: navbar;
+            background-color: rebeccapurple;
+        }
+
+        .titulo {
+            color: white;
+            font-size: 2.5rem;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .division {
+            grid-area: division;
+        }
+
+        .articulo {
+            grid-area: articulo;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        /*Vista para el telefono*/
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-areas:
+                "menu"
+                "division"
+                "articulo"
+                "footer";
+        }
+
+        @media(min-width: 768px) {
+            .grid-container {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: auto;
+                grid-template-areas:
+                    "menu menu"
+                    "navbar navbar"
+                    "division division"
+                    "sidebar sidebar"
+                    "articulo articulo"
+                    "footer footer";
+            }
+        }
+
+        @media(min-width: 900px) {
+            .grid-container {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: auto;
+                grid-template-areas:
+                    "menu menu menu"
+                    "division division division"
+                    "articulo articulo articulo"
+                    "footer footer footer";
+            }
+        }
+    </style>
+</head>
+
+<body class="grid-container">
+
+    <div class="menu">
+        <header class="navegacion">
+          <div>
+            <h1>CINEMA CH41</h1>
+          </div>
+          <div>
+            <img src="./logo.png" alt="logo">
+          </div>
+          <div>
+            <button class="boton">
+              <a href="./form.html">Registrate para adquirir tus boletos</a></li>
+            </button>
+          </div>
+        </header>
+      </div>
+
+      <div class="division">
+        <div>
+          <p>CONOCE NUESTROS COMBOS <br>Y DISFRUTA TU FUNCIÓN</p>
+        </div>
+        <div>
+          <button><a href="./tienda.html">AQUÍ ></a></button>
+        </div>
+      </div>
+
+    <section class="articulo">
+            <h1 class="titulos" id="titulo_uno">PELÍCULAS EN TENDENCIA</h1>
+            <div class="container">
+              <div id="one">
+                <img class=imagen src="./CARTELERA/desafiantes.jpeg" alt="Photo1">
+                <div>
+                  <h3>Desafiantes</h3>
+                  <p>Clasificación: S/C</p>
+                  <h3><strong>Horario: 11:00 am</strong>
+                    <h/3><br>
+                      <br><button><a href="./form.html">Adquiere tus boletos</a></button>
+                </div>
+              </div>
+              <div id="one">
+                <img class=imagen src="./CARTELERA/garfield-fuera-de-casa.png" alt="Photo2">
+                <div>
+                  <h3>Garfield: Fuera de casa</h3>
+                  <p>Clasificación: AA</p>
+                  <h3><strong>Horario: 01:00 pm</strong>
+                    <h /3><br>
+                      <br><button><a href="./form.html">Adquiere tus boletos</a></button>
+                </div>
+              </div>
+              <div id="one">
+                <img class=imagen src="./CARTELERA/guerra-civil.jpeg" alt="Photo3">
+                <div>
+                  <h3>Guerra Civil</h3>
+                  <p>Clasificación: C</p>
+                  <h3><strong>Horario: 03:00 pm</strong>
+                    <h /3><br>
+                      <br><button><a href="./form.html">Adquiere tus boletos</a></button>
+                </div>
+              </div>
+              <div id="one">
+                <img class=imagen src="./CARTELERA/jugaremos-en-el-bosque.jpeg" alt="Photo4">
+                <div>
+                  <h3>Jugaremos En El Bosque</h3>
+                  <p>Clasificación: B</p>
+                  <h3><strong>Horario: 05:00 pm</strong>
+                    <h /3><br>
+                      <br><button><a href="./form.html">Adquiere tus boletos</a></button>
+                </div>
+              </div>
+              <div id="one">
+                <img class=imagen src="./CARTELERA/profesion-peligro.jpeg" alt="Photo5">
+                <div>
+                  <h3>Profesión peligro</h3>
+                  <p>Clasificación: S/C</p>
+                  <h3><strong>Horario: 07:00 pm</strong>
+                    <h/3><br>
+                      <br><button><a href="./form.html">Adquiere tus boletos</a></button>
+                </div>
+              </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <h1 class="titulos" id="titulo_dos">PROXIMOS ESTRENOS</h1>
+    <div class="wrapper">
+      <div class="slider" id="slider">
+        <ul class="slides">
+          <li class="slide" id="slide1">
+            <a href="#">
+              <p class="caption"></p>
+              <img src="./PROXIMAMENTE/amigos-imaginarios.jpeg" alt="photo 1">
+            </a>
+          </li>
+          <li class="slide" id="slide2">
+            <a href="#">
+              <p class="caption"></p>
+              <img src="./PROXIMAMENTE/angeles-inesperados.png" alt="photo 2">
+            </a>
+          </li>
+          <li class="slide" id="slide3">
+            <a href="#">
+              <p class="caption"></p>
+              <img src="./PROXIMAMENTE/furiosa.jpeg" alt="photo 3">
+            </a>
+          </li>
+          <li class="slide" id="slide4">
+            <a href="#">
+              <p class="caption"></p>
+              <img src="./PROXIMAMENTE/inmaculada.jpeg" alt="photo 4">
+            </a>
+          </li>
+          <li class="slide" id="slide5">
+            <a href="#">
+              <p class="caption"></p>
+              <img src="./PROXIMAMENTE/monkey-man-el-despertar-de-la-bestia.jpeg" alt="photo 5">
+            </a>
+          </li>
+          <li class="slide">
+            <a href="#">
+              <p class="caption"></p>
+              <img src="./PROXIMAMENTE/werther-el-musical.jpeg" alt="photo 1">
+            </a>
+          </li>
+        </ul>
+        <ul class="slider-controler">
+          <li><a href="#slide1">&bullet;</a></li>
+          <li><a href="#slide2">&bullet;</a></li>
+          <li><a href="#slide3">&bullet;</a></li>
+          <li><a href="#slide4">&bullet;</a></li>
+          <li><a href="#slide5">&bullet;</a></li>
+        </ul>
+      </div>
+    </div>
+    </footer>
+
+
+</body>
+</html>

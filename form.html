@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bienvenido</h1>
+        <p>¡Para adquirir tus boletos completa el formulario!</p>
+        </div>
+
+        <form class="form">
+            <h2>Cuenta</h2>
+            <label>Tu nombre:</label>
+            <input type="text" placeholder="Fulanita">
+            <br>
+            <label>Tu apellido:</label>
+            <input type="text" placeholder="Pérez">
+            <br>
+            <label>Ingresa tu email:</label>
+            <input type="email" placeholder="fulanitaperez@me.com">
+            <br>
+            <label>Selecciona tu película</label>
+            <select name="horario">
+                <option value="peliuno">Garfield: Fuera de casa</option>
+                <option value="pelidos">Pelicula 2</option>
+                <option value="pelitres">Pelicula 3</option>
+                <option value="pelicuatro">Pelicula 4</option>
+                <option value="pelicinco">Pelicula 5</option>
+            </select>
+            <br>
+            <label>Selecciona el horario de tu interés</label>
+            <input type="time">
+            <br>
+            <label>Ingresa número de boletos:</label>
+            <input type="number">
+            <br>
+            <h2>Pago</h2>
+            <label">Nombre en la tarjeta</label>
+            <input type="text" placeholder="Fulanita Pérez">
+            <br>
+            <label>Número de tarjeta</label>
+            <input type="text" name="nombretarjeta" placeholder="11-2233-4444">
+            <br>
+            <label>Mes y Año de Expiración</label>
+            <input type="month" name="mes" placeholder="Septiembre">
+            <br>
+            <input type="checkbox" value="acepto">
+            <label for="">Acepto términos y condiciones</label>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+</body>
+
+</html>
